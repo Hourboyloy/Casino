@@ -14,7 +14,50 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body class="">
+<body id="bodystyle" class="">
+    <div id="sideleft" class="bg-white lg:hidden w-[82%] md:w-10/12 z-40 transition-all duration-300  fixed top-0 h-[120vh] -left-full space-y-2">
+        <div class="uppercase px-3 pt-8 font-bold text-4xl text-[#3803CE]">
+           Casino
+        </div>
+        <div class=" font-bold text-gray-800 *:border-b *:py-4 *:px-3 text-sm flex flex-col">
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[21px]" src="./Assets/1.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">Online casinos</span>
+            </a>
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[21px]" src="./Assets/2.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">Free games</span>
+            </a>
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[21px]" src="./Assets/3.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">Table games</span>
+            </a>
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[21px]" src="./Assets/4.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">Slots</span>
+            </a>
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[15px]" src="./Assets/5.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">Bonuses</span>
+            </a>
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[20px]" src="./Assets/6.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">Reviews</span>
+            </a>
+            <a href="" class="flex items-center space-x-1 group">
+                <img class="w-[19px]" src="./Assets/7.png" alt="">
+                <span class="group-hover:text-[#CECEFD] transition-all duration-300">News & guides</span>
+            </a>
+        </div>
+    </div>
+
+    <div onclick="closeNav()" id="sideright" class="bg-gray-900 lg:hidden md:w-2/12 w-[18%] z-40 transition-all fixed h-[120vh] -right-full top-0 bg-opacity-60">
+        <div class=" flex flex-col items-center justify-center space-y-1 w-full top-5 left-0 absolute">
+            <ion-icon name="close-sharp" class="text-white md:text-3xl"></ion-icon>
+            <p class=" md:text-lg text-[10px] font-bold text-white uppercase">Close</p>
+        </div>
+    </div>
+
     <div class=" text-white">
         <header class="bg-[#3803CE] lg:h-[121.20px] sticky top-0 z-20 px-4 md:px-5 lg:px-6 xl:px-0">
             <div class="max-w-[1232.09px] mx-auto space-y-4 h-full lg:flex flex-col justify-center hidden">
@@ -69,8 +112,8 @@
             </div>
 
             <div class="lg:hidden flex items-center justify-between pt-4 pb-3">
-                <div>
-                    <ion-icon name="menu-sharp" class=" md:text-4xl text-2xl"></ion-icon>
+                <div class="z-30">
+                    <ion-icon onclick="showNav()" name="menu-sharp" class=" md:text-4xl text-2xl z-40 cursor-pointer"></ion-icon>
                 </div>
                 <div>
                     <img class="md:w-[180px] w-[130px]" src="./Assets/logo-casino-org.svg" alt="">

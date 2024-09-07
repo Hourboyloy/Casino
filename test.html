@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Scroll Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom class to disable scrolling */
+        .stop-scroll {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main content that is scrollable -->
+    <div class="content h-[200vh] bg-gray-200 p-8">
+        <h1 class="text-3xl font-bold mb-4">Scroll Down to See the Stop Scroll Example</h1>
+        <p class="mb-8">This page is intentionally long so that you can scroll. Below you'll find buttons to stop and restart scrolling.</p>
+
+        <button id="stopScrollBtn" class="p-4 bg-blue-500 text-white rounded-lg">Stop Scroll</button>
+        <button id="startScrollBtn" class="p-4 bg-green-500 text-white rounded-lg hidden">Start Scroll</button>
+    </div>
+
+    <!-- Include the JavaScript file or script directly in the HTML -->
+    <script>
+        const stopScrollBtn = document.getElementById("stopScrollBtn");
+        const startScrollBtn = document.getElementById("startScrollBtn");
+
+        // Function to stop scrolling
+        const stopScroll = () => {
+            document.body.classList.add("stop-scroll"); // Disable scroll
+            stopScrollBtn.classList.add("hidden"); // Hide stop button
+            startScrollBtn.classList.remove("hidden"); // Show start button
+        };
+
+        // Function to enable scrolling
+        const startScroll = () => {
+            document.body.classList.remove("stop-scroll"); // Enable scroll
+            stopScrollBtn.classList.remove("hidden"); // Show stop button
+            startScrollBtn.classList.add("hidden"); // Hide start button
+        };
+
+        // Add event listeners to the buttons
+        stopScrollBtn.addEventListener("click", stopScroll);
+        startScrollBtn.addEventListener("click", startScroll);
+    </script>
+
+</body>
+</html>
